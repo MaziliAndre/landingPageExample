@@ -1,7 +1,6 @@
 :root{
     --primary-color: #0A1128;
     --white-color: #FFFFFF;
-    --yellow-color: #ffff00;
     --light-gray-color: #dedada;
     --gap: 3rem;
 }
@@ -20,6 +19,7 @@ html{
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
+    line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -33,6 +33,9 @@ h1{
 
 h2{
     font-size: 5.5rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
 h3{
@@ -53,14 +56,15 @@ a{
 
 
 .main-bg{
-    background-image: url('../img/main.svg');
+    background-image: url('../img/main-bg.svg');
     background-size: cover;
     background-position: center center;
-    color: var(--yellow-color);
+    color: var(--white-color);
 }
 
 .white-bg{
     background: var(--white-color);
+    color: var(--primary-color);
 }
 
 .main-content{
@@ -80,7 +84,8 @@ a{
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 1px solid var(--light-gray-color);
+    border-bottom: 0.1rem solid var(--light-gray-color);
+    z-index: 1;
 }
 
 .menu-content{
@@ -89,6 +94,10 @@ a{
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.menu-spacing{
+    height: 65px;
 }
 
 .menu h2{
@@ -114,4 +123,31 @@ a{
 .menu ul li a:hover{
     background-color: rgb(0, 0, 0, 0.35);   
     transition: 500ms;
+}
+
+.intro-content{
+    position: relative;
+    top: -8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    height: 100vh;
+}
+
+.intro-text-content, .intro-img{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-text-content h2{
+    font-size: 8rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.intro-img img, .intro-img svg{
+    max-width: 100%;
+    max-height: auto;
 }
